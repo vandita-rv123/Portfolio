@@ -1,20 +1,52 @@
 
 /**********home page****/
 .a-1{
-  position: absolute;
+position: absolute;
+right: 1rem;
   width: 100%;
   height: 100%;
+
 
 }
 
 .topleft {
   position: absolute;
   top: 8px;
-  left: 16px;
+  left: 75px;
   font-size: 18px;
+  font-size: 2rem;
+}
+.a-2 {
+  background-color: #000;
+}
+.a-3{
+
+  font-size: 1.5rem;
+    color: #fff;
+}
+a:hover{
+  color:#fff;
 }
 
+.glow {
+  text-decoration: none;
+  font-size: 80px;
+  color: #000;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+ -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
 
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2f4353, 0 0 40px #2f4353, 0 0 50px #2f4353, 0 0 60px #2f4353, 0 0 70px #2f4353;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #2f4353, 0 0 40px #2f4353, 0 0 50px #2f4353, 0 0 60px #2f4353, 0 0 70px #2f4353, 0 0 80px #2f4353;
+  }
+}
 
 
 
@@ -27,32 +59,205 @@ body{
 
 }
 
-.p-3{
-  font-family: 'Source Serif Pro', serif;
-  text-align: center;
-  margin-top: 1rem;
-  color: #fff;
-  font-size: 2.5rem;
+section{
+  width: 100%;
+  min-height: 300px;
+
 }
 
-.p-4{
-  margin-top: 0;
-  position: fixed;
-  width: 35%;
-  background-color: #000;
-  height: 100%;
-transition: .5s ease;
+.wave{
+  opacity: 1.7;
+  position: relative;
+  background-color: #923cb5;
+background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+
+
 }
-.p-1{
+.wave:before{
+  content: '';
   position: absolute;
-right: 0;
-width:35%;
-height: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 145px;
+  background:url(../images/white-wave.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 
+}
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 3rem;
+
+
+}
+
+  .glow1 {
+    text-decoration: none;
+    font-size: 3rem;;
+    color: #bdd4e7;
+
+
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+   -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes glow1 {
+    from {
+      text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+    }
+
+    to {
+      text-shadow: 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000, 0 0 80px #000;
+    }
+  }
+
+.b-1{
+  color: #fff;
+  font-size: 1.5rem;
+  padding-top: 0;
+  margin-top: 0;
+
+}
+
+.b-2{
+  position: absolute;
+  right: 10rem;
+  width: 20%;
+  height: 40%;
+  border-radius: 50%;
 }
 
 
 
+
+body {
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 300px;
+  left: calc(30% - 200px);
+  display: flex;
+}
+
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #d387ab;
+  background-image: linear-gradient(315deg, #d387ab 0%, #b279a7 74%);
+
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: red;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #fff;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  color: #d387ab;
+}
+
+.a_tag{
+  text-decoration: none;
+
+}
+.a_tag:hover{
+  color: #923cb5;
+}
 
 /***.p-1:hover {
   transform: scale(1.5); /* (150% zoom)*/
